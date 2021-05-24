@@ -1,3 +1,9 @@
+html {
+  overflow: hidden;
+}
+body {
+  background-color: #ddd;
+}
 .App {
   text-align: center;
 }
