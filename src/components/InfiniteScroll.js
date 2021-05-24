@@ -11,6 +11,7 @@ const MAX_NUMBER = 420
 const InfiniteScrollComponent = () => {
   const [open, setOpen] = useState(false)
   const [photoId, setPhotoId] = useState(-1)
+  const [photo, setPhoto] = useState({})
 
   const [items, setItems] = useState([])
   const [hasMore, setHasMore] = useState(true)
@@ -62,11 +63,12 @@ const InfiniteScrollComponent = () => {
           </p>
         }
       >
-        <PhotoList photos={items} setPhotoId={setPhotoId} />
+        <PhotoList photos={items} setPhotoId={setPhotoId} setPhoto={setPhoto} />
       </InfiniteScroll>
       <PhotoDialog
         photoId={photoId}
         setPhotoId={setPhotoId}
+        photo={photo}
         open={open}
         setOpen={setOpen}
       />
